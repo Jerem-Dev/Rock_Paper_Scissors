@@ -22,32 +22,16 @@ function playGame(userChoice, computerChoice) {
   }
   console.log("Computer choice was : " + computerChoice);
   console.log("Your choice was : " + upperUserChoice.toUpperCase());
-  if (upperUserChoice === "ROCK") {
-    if (computerChoice === "SCISSORS") {
-      console.log("You win !");
-    } else if (computerChoice === "PAPER") {
-      console.log("You lose !");
-    } else {
-      console.log("EQUALITY !");
-    }
-  } else if (upperUserChoice === "PAPER") {
-    if (computerChoice === "ROCK") {
-      console.log("You win !");
-    } else if (computerChoice === "SCISSORS") {
-      console.log("You lose !");
-    } else {
-      console.log("EQUALITY !");
-    }
-  } else if (upperUserChoice === "SCISSORS") {
-    if (computerChoice === "PAPER") {
-      console.log("You win !");
-    } else if (computerChoice === "ROCK") {
-      console.log("You lose !");
-    } else {
-      console.log("EQUALITY !");
-    }
+  if (upperUserChoice === computerChoice) {
+    console.log("Equality you've done the same choice!");
+  } else if (
+    (upperUserChoice === "PAPER" && computerChoice === "ROCK") ||
+    (upperUserChoice === "ROCK" && computerChoice === "SCISSORS") ||
+    (upperUserChoice === "SCISSORS" && computerChoice === "PAPER")
+  ) {
+    console.log(upperUserChoice + " beats " + computerChoice + " you win !");
   } else {
-    console.log("You must enter 'Rock', 'Paper'or 'Scissors'");
+    console.log(computerChoice + " beats " + upperUserChoice + " you lose !");
   }
 }
 
