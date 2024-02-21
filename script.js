@@ -1,12 +1,12 @@
-function getComputerChoice(str1, str2, str3) {
+function getComputerChoice() {
   let randomChoice = Math.floor(Math.random() * 3);
   switch (randomChoice) {
     case 0:
-      return str1;
+      return "ROCK";
     case 1:
-      return str2;
+      return "PAPER";
     case 2:
-      return str3;
+      return "SCISSORS";
   }
 }
 
@@ -51,7 +51,7 @@ function playGame(userChoice, computerChoice) {
   }
 }
 
-let computerChoice = getComputerChoice("ROCK", "PAPER", "SCISSORS");
+let computerChoice = getComputerChoice();
 
 let userChoice = prompt(
   "Type 'Rock' 'Paper' or 'Scissors' and press or click enter to play game"
