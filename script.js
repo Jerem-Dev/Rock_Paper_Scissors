@@ -29,11 +29,10 @@ function getUserChoice() {
 }
 
 //Launch the game : compare user et computer choices and remind both picks and show the winner
-function playGame() {
-  let userChoice = getUserChoice();
+function playGame(userChoice) {
   let computerChoice = getComputerChoice();
   console.log("Computer choice was : " + computerChoice);
-  console.log("Your choice was : " + userChoice.toUpperCase());
+  console.log("Your choice was : " + userChoice);
   if (userChoice === computerChoice) {
     console.log("Equality you've done the same choice!");
   } else if (
@@ -46,5 +45,13 @@ function playGame() {
     console.log(computerChoice + " beats " + userChoice + " you lose !");
   }
 }
-
-playGame();
+document.getElementById("rock").addEventListener("click", () => {
+  playGame("ROCK");
+});
+document.getElementById("paper").addEventListener("click", () => {
+  playGame("PAPER");
+});
+document.getElementById("scissors").addEventListener("click", () => {
+  playGame("SCISSORS");
+});
+// playGame();
