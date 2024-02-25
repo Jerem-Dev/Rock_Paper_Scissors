@@ -15,23 +15,6 @@ function getComputerChoice() {
   }
 }
 
-//Ask the user to make a choice
-// function getUserChoice() {
-//   let userChoice = prompt(
-//     "Type 'Rock' 'Paper' or 'Scissors' and press or click enter to play game"
-//   );
-//   let upperUserChoice = userChoice.toUpperCase();
-//   while (
-//     upperUserChoice !== "ROCK" &&
-//     upperUserChoice !== "PAPER" &&
-//     upperUserChoice !== "SCISSORS"
-//   ) {
-//     upperUserChoice = prompt("You must enter 'Rock', 'Paper' or 'Scissors'");
-//     upperUserChoice = upperUserChoice.toUpperCase();
-//   }
-//   return upperUserChoice;
-// }
-
 //Launch the game : compare user et computer choices and remind both picks and show the winner
 function playGame(userChoice) {
   let computerChoice = getComputerChoice();
