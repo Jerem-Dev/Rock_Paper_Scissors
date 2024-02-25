@@ -27,8 +27,21 @@ main {
   width: 50%;
 }
 
+.user-choice img {
+  width: 100px;
+  height: 100px;
+}
+
 .computer-choice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 50%;
+}
+.computer-choice img {
+  height: 200px;
+  width: 200px;
 }
 
 .top-choice {

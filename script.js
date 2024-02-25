@@ -32,7 +32,7 @@ function getComputerChoice() {
 //Launch the game : compare user et computer choices and remind both picks and show the winner
 function playGame(userChoice) {
   let computerChoice = getComputerChoice();
-  let resultMessage = "You : " + userChoice + " Computeur : " + computerChoice;
+  let resultMessage = "You : " + userChoice + " Computer : " + computerChoice;
   let winMessage = "YOU WIN !";
   let defeatMessage = "YOU LOOSE";
   let equalityMessage = " IT'S A TIE";
