@@ -1,10 +1,54 @@
 #choice-buttons button {
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 20px;
+  display: flex;
+  flex-direction: row;
+
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
 }
 
 #result {
-    margin-top: 20px;
-    font-size: 24px;
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.game-choices {
+  display: flex;
+}
+
+.user-choice {
+  width: 50%;
+}
+
+.computer-choice {
+  width: 50%;
+}
+
+.top-choice {
+  display: flex;
+  justify-content: center;
+}
+
+.bottom-choices {
+  display: flex;
+  justify-content: space-around;
+}
+
+#rock:hover,
+#paper:hover,
+#scissors:hover {
+  filter: brightness(1.75);
+}
+
+#win-defeat {
+  font-weight: bolder;
+  font-size: 25px;
+  margin-top: 25px;
 }

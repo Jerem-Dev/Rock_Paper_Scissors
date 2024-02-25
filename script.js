@@ -1,6 +1,7 @@
 // Return the choice of the computer
 function getComputerChoice() {
   let randomChoice = Math.floor(Math.random() * 3);
+
   switch (randomChoice) {
     case 0:
       return "ROCK";
@@ -12,46 +13,57 @@ function getComputerChoice() {
 }
 
 //Ask the user to make a choice
-function getUserChoice() {
-  let userChoice = prompt(
-    "Type 'Rock' 'Paper' or 'Scissors' and press or click enter to play game"
-  );
-  let upperUserChoice = userChoice.toUpperCase();
-  while (
-    upperUserChoice !== "ROCK" &&
-    upperUserChoice !== "PAPER" &&
-    upperUserChoice !== "SCISSORS"
-  ) {
-    upperUserChoice = prompt("You must enter 'Rock', 'Paper' or 'Scissors'");
-    upperUserChoice = upperUserChoice.toUpperCase();
-  }
-  return upperUserChoice;
-}
+// function getUserChoice() {
+//   let userChoice = prompt(
+//     "Type 'Rock' 'Paper' or 'Scissors' and press or click enter to play game"
+//   );
+//   let upperUserChoice = userChoice.toUpperCase();
+//   while (
+//     upperUserChoice !== "ROCK" &&
+//     upperUserChoice !== "PAPER" &&
+//     upperUserChoice !== "SCISSORS"
+//   ) {
+//     upperUserChoice = prompt("You must enter 'Rock', 'Paper' or 'Scissors'");
+//     upperUserChoice = upperUserChoice.toUpperCase();
+//   }
+//   return upperUserChoice;
+// }
 
 //Launch the game : compare user et computer choices and remind both picks and show the winner
 function playGame(userChoice) {
   let computerChoice = getComputerChoice();
-  console.log("Computer choice was : " + computerChoice);
-  console.log("Your choice was : " + userChoice);
+  let resultMessage = "You : " + userChoice + " Computeur : " + computerChoice;
+  let winMessage = "YOU WIN !";
+  let defeatMessage = "YOU LOOSE";
+  let equalityMessage = " IT'S A TIE";
   if (userChoice === computerChoice) {
-    console.log("Equality you've done the same choice!");
+    document.getElementById("win-defeat").innerHTML = equalityMessage;
+    document.getElementById("win-defeat").style.color = "yellow";
   } else if (
     (userChoice === "PAPER" && computerChoice === "ROCK") ||
     (userChoice === "ROCK" && computerChoice === "SCISSORS") ||
     (userChoice === "SCISSORS" && computerChoice === "PAPER")
   ) {
-    console.log(userChoice + " beats " + computerChoice + " you win !");
+    document.getElementById("win-defeat").innerHTML = winMessage;
+    document.getElementById("win-defeat").style.color = "green";
   } else {
-    console.log(computerChoice + " beats " + userChoice + " you lose !");
+    document.getElementById("win-defeat").innerHTML = defeatMessage;
+    document.getElementById("win-defeat").style.color = "red";
   }
+  document.getElementById("result").innerHTML = resultMessage;
 }
-document.getElementById("rock").addEventListener("click", () => {
+
+// Listen to user choice and launch the game with corresponding choice
+document.getElementById("rock").addEventListener("click", (event) => {
+  event.preventDefault();
   playGame("ROCK");
 });
-document.getElementById("paper").addEventListener("click", () => {
+document.getElementById("paper").addEventListener("click", (event) => {
+  event.preventDefault();
   playGame("PAPER");
 });
-document.getElementById("scissors").addEventListener("click", () => {
+document.getElementById("scissors").addEventListener("click", (event) => {
+  event.preventDefault();
   playGame("SCISSORS");
 });
 // playGame();
