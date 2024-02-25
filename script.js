@@ -4,10 +4,13 @@ function getComputerChoice() {
 
   switch (randomChoice) {
     case 0:
+      document.getElementById("img-computer").src = "img/rock.png";
       return "ROCK";
     case 1:
+      document.getElementById("img-computer").src = "img/paper.png";
       return "PAPER";
     case 2:
+      document.getElementById("img-computer").src = "img/scissors.png";
       return "SCISSORS";
   }
 }
