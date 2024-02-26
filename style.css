@@ -1,15 +1,5 @@
-#choice-buttons button {
-  display: flex;
-  flex-direction: row;
-
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: 20px;
-}
-
-#result {
-  margin-top: 20px;
-  font-size: 24px;
+body {
+  background-color: aliceblue;
 }
 
 main {
@@ -70,6 +60,11 @@ main {
 #paper:hover,
 #scissors:hover {
   filter: drop-shadow(2px 2px 4px grey);
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 24px;
 }
 
 #win-defeat {

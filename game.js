@@ -25,7 +25,7 @@ function playGame(userChoice) {
   let equalityMessage = " IT'S A TIE";
   if (userChoice === computerChoice) {
     document.getElementById("win-defeat").innerHTML = equalityMessage;
-    document.getElementById("win-defeat").style.color = "yellow";
+    document.getElementById("win-defeat").style.color = "darkgoldenrod";
   } else if (
     (userChoice === "PAPER" && computerChoice === "ROCK") ||
     (userChoice === "ROCK" && computerChoice === "SCISSORS") ||
