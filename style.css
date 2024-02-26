@@ -54,10 +54,22 @@ main {
   justify-content: space-around;
 }
 
+#rock,
+#paper,
+#scissors {
+  background-color: lightblue;
+  border-radius: 50%;
+  padding: 10px;
+}
+#scissors {
+  transform: rotate(180deg);
+  transform: scaleX(-1);
+}
+
 #rock:hover,
 #paper:hover,
 #scissors:hover {
-  filter: brightness(1.75);
+  filter: drop-shadow(2px 2px 4px grey);
 }
 
 #win-defeat {

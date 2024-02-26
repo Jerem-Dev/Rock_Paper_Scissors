@@ -4,23 +4,24 @@ function getComputerChoice() {
 
   switch (randomChoice) {
     case 0:
-      document.getElementById("img-computer").src = "img/rock.png";
+      document.getElementById("img-computer").src = "img/rock.svg";
       return "ROCK";
     case 1:
-      document.getElementById("img-computer").src = "img/paper.png";
+      document.getElementById("img-computer").src = "img/paper.svg";
       return "PAPER";
     case 2:
-      document.getElementById("img-computer").src = "img/scissors.png";
+      document.getElementById("img-computer").src = "img/scissors.svg";
       return "SCISSORS";
   }
 }
 
-//Launch the game : compare user et computer choices and remind both picks and show the winner
+// Launch the game: compare user and computer choices, display both picks, and show the winner
 function playGame(userChoice) {
   let computerChoice = getComputerChoice();
-  let resultMessage = "You : " + userChoice + " Computer : " + computerChoice;
+  let resultMessage =
+    "You : " + userChoice + " || Computer : " + computerChoice;
   let winMessage = "YOU WIN !";
-  let defeatMessage = "YOU LOOSE";
+  let defeatMessage = "YOU LOSE";
   let equalityMessage = " IT'S A TIE";
   if (userChoice === computerChoice) {
     document.getElementById("win-defeat").innerHTML = equalityMessage;
@@ -52,4 +53,3 @@ document.getElementById("scissors").addEventListener("click", (event) => {
   event.preventDefault();
   playGame("SCISSORS");
 });
-// playGame();
